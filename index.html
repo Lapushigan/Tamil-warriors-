@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TamilWarrior Guild</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loader Start -->
+    <div id="loader">
+        <div class="flames"></div>
+        <img src="tamilwarrior-logo.png" alt="Loading..." style="width: 150px; z-index: 2;">
+        <h2>Unleashing the Tamil Warrior! 🔥</h2>
+        <audio id="roarSound" src="roar.mp3" preload="auto"></audio>
+    </div>
+    <!-- Loader End -->
+
+    <div id="content">
+        <section style="text-align: center; padding: 50px;">
+            <h1>🔥 Welcome to TamilWarrior Guild 🔥</h1>
+            <p>Join the most fearless clan in the battle arena!</p>
+            <a href="#" class="join-button">Join Now</a>
+        </section>
+    </div>
+
+    <script>
+    window.addEventListener("load", function() {
+        const loader = document.getElementById('loader');
+        const content = document.getElementById('content');
+        const roarSound = document.getElementById('roarSound');
+
+        roarSound.play();
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+            content.style.display = 'block';
+        }, 1500);
+    });
+    </script>
+</body>
+</html>
